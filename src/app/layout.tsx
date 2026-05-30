@@ -23,15 +23,15 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://punithanfly.com"),
   title: {
-    default: "Punithan Drone Pilot | DGCA Approved Drone Services in Ahmedabad",
+    default: "Punithan Drone Pilot | DGCA Approved Drone Services in Chennai",
     template: "%s | Punithan Drone Pilot",
   },
   description:
-    "Professional DGCA approved drone pilot services in Ahmedabad, Gujarat. Aerial photography, videography, survey & mapping, industrial inspection, construction monitoring, and real estate marketing.",
+    "Professional DGCA approved drone pilot services in Chennai, Tamil Nadu. Aerial photography, videography, survey & mapping, industrial inspection, construction monitoring, and real estate marketing.",
   keywords: [
-    "drone pilot Ahmedabad",
+    "drone pilot Chennai",
     "DGCA approved drone services",
-    "aerial photography Gujarat",
+    "aerial photography Tamil Nadu",
     "drone videography India",
     "construction drone monitoring",
     "real estate drone photography",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Punithan Drone Pilot",
     title: "Punithan Drone Pilot | DGCA Approved Drone Services",
     description:
-      "Elevating Perspectives, Delivering Results. Professional drone services for aerial photography, videography, mapping, and inspections in Ahmedabad.",
+      "Elevating Perspectives, Delivering Results. Professional drone services for aerial photography, videography, mapping, and inspections in Chennai.",
     images: [
       {
         url: "/og-image.jpg",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Punithan Drone Pilot | DGCA Approved Drone Services",
     description:
-      "Professional drone pilot services in Ahmedabad - Aerial Photography, Videography, Survey & Mapping",
+      "Professional drone pilot services in Chennai - Aerial Photography, Videography, Survey & Mapping",
     images: ["/og-image.jpg"],
   },
   robots: {

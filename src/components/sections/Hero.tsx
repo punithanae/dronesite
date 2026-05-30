@@ -49,7 +49,6 @@ export function Hero() {
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-sm font-medium text-blue-700">
                 <CheckCircle className="w-4 h-4" />
                 DGCA APPROVED DRONE PILOT
-                <span className="text-xs text-blue-500 ml-1">License No. DOP/XXXX/2024</span>
               </span>
             </motion.div>
 

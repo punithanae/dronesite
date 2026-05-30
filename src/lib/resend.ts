@@ -138,7 +138,7 @@ export async function sendConfirmationEmail(
               <a href="#">LinkedIn</a>
             </div>
             <p>DGCA Approved Drone Pilot Services</p>
-            <p>Ahmedabad, Gujarat, India</p>
+            <p>Chennai, Tamil Nadu, India</p>
             <p>© 2024 Punithan Drone Pilot. All rights reserved.</p>
           </div>
         </div>
