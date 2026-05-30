@@ -1,0 +1,11 @@
+export { Navbar } from "./Navbar";
+export { Hero } from "./Hero";
+export { About } from "./About";
+export { Services } from "./Services";
+export { Industries } from "./Industries";
+export { Portfolio } from "./Portfolio";
+export { WhyChooseUs } from "./WhyChooseUs";
+export { Testimonials } from "./Testimonials";
+export { Consultation } from "./Consultation";
+export { Contact } from "./Contact";
+export { Footer } from "./Footer";
