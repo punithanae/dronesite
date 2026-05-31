@@ -53,35 +53,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check Supabase configuration and save to database
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-    if (supabaseUrl && supabaseServiceKey) {
-      const supabase = createClient(supabaseUrl, supabaseServiceKey);
-
-      const { error: dbError } = await supabase
-        .from("consultations")
-        .insert([
-          {
-            name,
-            phone,
-            email,
-            service,
-            location: location || null,
-            preferred_date: preferredDate || null,
-            message: message || null,
-            status: "new",
-          },
-        ]);
-
-      if (dbError) {
-        console.error("Database error:", dbError);
-        // We log the error but don't fail the request, so the email can still be sent
-      }
-    } else {
-      console.warn("Supabase not configured - skipping database save");
-    }
+    // Database disabled as per request
 
     // Send email notifications (if Resend is configured)
     if (process.env.RESEND_API_KEY) {
