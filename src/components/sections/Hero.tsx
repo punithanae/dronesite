@@ -32,101 +32,76 @@ export function Hero() {
     <section
       ref={containerRef}
       id="home"
-      className="relative min-h-[90vh] flex items-center overflow-hidden bg-white pt-16"
+      className="relative min-h-screen flex items-center overflow-hidden pt-16"
     >
-      {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gray-50 to-transparent" />
-        <div className="absolute top-20 left-10 w-48 h-48 bg-gold-400/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl" />
+      {/* Background Carousel */}
+      <div className="absolute inset-0 z-0">
+        <MediaCarousel items={heroMedia} />
+        <div className="absolute inset-0 bg-black/50 z-10" /> {/* Dark Overlay */}
       </div>
 
       {/* Content */}
-      <motion.div style={{ opacity }} className="relative z-20 container-custom py-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Side - Text Content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-4"
-            >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-sm font-medium text-blue-700">
-                <CheckCircle className="w-4 h-4" />
-                DGCA APPROVED DRONE PILOT
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
-            >
-              <span className="text-gray-900">Transforming</span>
-              <br />
-              <span className="gradient-text">Perspectives.</span>
-              <br />
-              <span className="text-gray-900">Delivering Results.</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-gray-600 text-lg mb-6 max-w-lg"
-            >
-              Professional drone pilot delivering high-quality aerial solutions
-              for businesses with precision, safety & creativity.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-8"
-            >
-              <Link
-                href="#consultation"
-                className="btn-primary flex items-center gap-2"
-              >
-                <span>Explore My Work</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <Link
-                href="#portfolio"
-                className="flex items-center gap-2 px-6 py-3 text-gray-700 font-medium hover:text-gray-900 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                  <Play className="w-4 h-4 ml-0.5" />
-                </div>
-                <span>Watch Showreel</span>
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* Right Side - Media Carousel */}
+      <motion.div style={{ opacity }} className="relative z-20 container-custom py-8 w-full">
+        <div className="max-w-3xl mx-auto text-center mt-12">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative order-1 lg:order-2 h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-6 flex justify-center"
           >
-            <MediaCarousel items={heroMedia} />
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium text-white shadow-xl">
+              <CheckCircle className="w-4 h-4 text-gold-400" />
+              DGCA APPROVED DRONE PILOT
+            </span>
+          </motion.div>
 
-            {/* Floating Badge - Equipment */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
-              className="absolute bottom-6 right-6 z-10 bg-white/90 backdrop-blur-md rounded-xl px-4 py-2 shadow-lg border border-white/20"
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-white drop-shadow-lg"
+          >
+            Transforming
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500">Perspectives.</span>
+            <br />
+            Delivering Results.
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-gray-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-md"
+          >
+            Professional drone pilot delivering high-quality aerial solutions
+            for businesses with precision, safety & creativity.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          >
+            <Link
+              href="#consultation"
+              className="bg-gold-500 hover:bg-gold-600 text-gray-900 px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center gap-2"
             >
-              <p className="text-sm font-semibold text-gray-900">4K Ultra HD</p>
-              <p className="text-xs text-gray-600">Cinematic Footage</p>
-            </motion.div>
+              <span>Explore My Work</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link
+              href="#portfolio"
+              className="flex items-center gap-3 px-6 py-3 text-white font-medium hover:text-gold-300 transition-colors bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-xl border border-white/10"
+            >
+              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                <Play className="w-4 h-4 ml-0.5" />
+              </div>
+              <span>Watch Showreel</span>
+            </Link>
           </motion.div>
         </div>
 
@@ -135,17 +110,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-8 lg:mt-12"
+          className="mt-8"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8 bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8 bg-black/40 backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-white/10">
             {stats.map((stat, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center">
-                  <stat.icon className="w-5 h-5 text-gray-600" />
+              <div key={index} className="flex flex-col items-center text-center gap-2">
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-2">
+                  <stat.icon className="w-6 h-6 text-gold-400" />
                 </div>
                 <div>
-                  <p className="text-xl font-bold text-gray-900">{stat.value}</p>
-                  <p className="text-xs text-gray-500">{stat.label}</p>
+                  <p className="text-2xl font-bold text-white">{stat.value}</p>
+                  <p className="text-sm text-gray-300">{stat.label}</p>
                 </div>
               </div>
             ))}
@@ -158,14 +133,14 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="flex flex-col items-center gap-1 text-gray-400"
+          className="flex flex-col items-center gap-2 text-white/70"
         >
-          <span className="text-xs uppercase tracking-widest">Scroll to Explore</span>
+          <span className="text-[10px] font-medium uppercase tracking-[0.2em]">Scroll to Explore</span>
           <ChevronDown className="w-4 h-4" />
         </motion.div>
       </motion.div>
