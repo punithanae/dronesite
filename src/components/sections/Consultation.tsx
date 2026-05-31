@@ -90,30 +90,30 @@ export function Consultation() {
     >
       <div className="container-custom relative z-10">
         {/* Compact CTA Banner */}
-        <div className="bg-gray-900 rounded-2xl p-8 md:p-10 mb-12 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
+        <div className="bg-gradient-to-r from-gold-400 to-gold-600 rounded-2xl p-8 md:p-10 mb-12 relative overflow-hidden shadow-xl">
+          <div className="absolute inset-0 opacity-20">
             <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
               <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.5"/>
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="1"/>
               </pattern>
               <rect width="100" height="100" fill="url(#grid)"/>
             </svg>
           </div>
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center backdrop-blur-sm">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-white">Have a Project in Mind?</h3>
-                <p className="text-gray-400 text-sm">Let&apos;s discuss how drone technology can elevate your business.</p>
+                <h3 className="text-2xl font-bold text-white mb-1">Have a Project in Mind?</h3>
+                <p className="text-white/90 text-sm font-medium">Let&apos;s discuss how drone technology can elevate your business.</p>
               </div>
             </div>
-            <a href="#contact" className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
+            <a href="#contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 whitespace-nowrap">
               Get in Touch
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>

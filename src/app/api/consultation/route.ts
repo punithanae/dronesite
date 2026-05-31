@@ -77,10 +77,7 @@ export async function POST(request: NextRequest) {
 
       if (dbError) {
         console.error("Database error:", dbError);
-        return NextResponse.json(
-          { error: "Failed to save consultation request" },
-          { status: 500 }
-        );
+        // We log the error but don't fail the request, so the email can still be sent
       }
     } else {
       console.warn("Supabase not configured - skipping database save");
