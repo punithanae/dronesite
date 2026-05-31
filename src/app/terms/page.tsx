@@ -137,7 +137,7 @@ export default function TermsOfService() {
               <p className="text-gray-600">
                 These terms are governed by the laws of India. Any disputes arising from these terms
                 or our services shall be subject to the exclusive jurisdiction of the courts in
-                Ahmedabad, Gujarat.
+                Chennai, Tamil Nadu.
               </p>
             </section>
 
@@ -148,9 +148,9 @@ export default function TermsOfService() {
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
                 <p className="text-gray-900 font-medium">Punithan Drone Pilot</p>
-                <p className="text-gray-600">Email: contact@punithandronepilot.com</p>
-                <p className="text-gray-600">Phone: +91 XXXXX XXXXX</p>
-                <p className="text-gray-600">Location: Ahmedabad, Gujarat, India</p>
+                <p className="text-gray-600">Email: contact@punithanfly.com</p>
+                <p className="text-gray-600">Phone: +91 93616 23073</p>
+                <p className="text-gray-600">Location: Chennai, Tamil Nadu, India</p>
               </div>
             </section>
           </div>

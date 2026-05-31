@@ -208,10 +208,10 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: "Instagram", url: "https://instagram.com/punithandronepilot", icon: "Instagram" },
-  { platform: "YouTube", url: "https://youtube.com/@punithandronepilot", icon: "Youtube" },
-  { platform: "LinkedIn", url: "https://linkedin.com/in/punithandronepilot", icon: "Linkedin" },
-  { platform: "Facebook", url: "https://facebook.com/punithandronepilot", icon: "Facebook" },
+  { platform: "Instagram", url: "https://instagram.com/punithanfly", icon: "Instagram" },
+  { platform: "YouTube", url: "https://youtube.com/@punithanfly", icon: "Youtube" },
+  { platform: "LinkedIn", url: "https://linkedin.com/in/punithanfly", icon: "Linkedin" },
+  { platform: "Facebook", url: "https://facebook.com/punithanfly", icon: "Facebook" },
 ];
 
 export const CONTACT_INFO = {

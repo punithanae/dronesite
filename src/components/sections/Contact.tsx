@@ -172,7 +172,7 @@ export function Contact() {
             className="bg-white rounded-2xl overflow-hidden h-[500px] shadow-card border border-gray-100"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.74847524895!2d72.41493184738927!3d23.02049903100264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497511.1146313385!2d79.92880757788487!3d13.047525472851493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1717000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

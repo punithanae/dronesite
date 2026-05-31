@@ -110,8 +110,8 @@ export default function PrivacyPolicy() {
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
                 <p className="text-gray-900 font-medium">Punithan Drone Pilot</p>
-                <p className="text-gray-600">Email: contact@punithandronepilot.com</p>
-                <p className="text-gray-600">Location: Ahmedabad, Gujarat, India</p>
+                <p className="text-gray-600">Email: contact@punithanfly.com</p>
+                <p className="text-gray-600">Location: Chennai, Tamil Nadu, India</p>
               </div>
             </section>
           </div>

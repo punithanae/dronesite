@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+// Google fonts removed due to network errors
 import "./globals.css";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
@@ -7,18 +7,8 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 import { RecaptchaProvider } from "@/components/providers/RecaptchaProvider";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-  display: "swap",
-});
+const inter = { variable: "--font-inter" };
+const poppins = { variable: "--font-poppins" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://punithanfly.com"),
