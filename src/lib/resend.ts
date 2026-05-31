@@ -75,12 +75,16 @@ export async function sendConsultationEmail(data: ConsultationEmailProps) {
   `;
 
   const result = await resend.emails.send({
-    from: "Punithan Drone Pilot <noreply@punithanfly.com>",
+    from: "Punithan Drone Pilot <onboarding@resend.dev>",
     to: process.env.NOTIFICATION_EMAIL!,
     reply_to: email,
     subject: `New Consultation Request from ${name} - ${service}`,
     html: emailHtml,
   });
+
+  if (result.error) {
+    console.error("Resend API Error (Admin Notification):", result.error);
+  }
 
   return result;
 }
@@ -147,11 +151,15 @@ export async function sendConfirmationEmail(
   `;
 
   const result = await resend.emails.send({
-    from: "Punithan Drone Pilot <noreply@punithanfly.com>",
+    from: "Punithan Drone Pilot <onboarding@resend.dev>",
     to: email,
     subject: "Thank You for Your Consultation Request - Punithan Drone Pilot",
     html: emailHtml,
   });
+
+  if (result.error) {
+    console.error("Resend API Error (Client Confirmation):", result.error);
+  }
 
   return result;
 }
