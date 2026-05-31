@@ -63,7 +63,10 @@ export function Navbar() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="relative px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+                    className={cn(
+                      "relative px-4 py-2 text-sm font-medium transition-colors duration-300 group",
+                      isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/90 hover:text-white"
+                    )}
                   >
                     {item.label}
                     <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gold-400 group-hover:w-1/2 transition-all duration-300" />
@@ -77,9 +80,12 @@ export function Navbar() {
             <div className="flex items-center gap-4">
               <a
                 href="tel:+919361623073"
-                className="hidden lg:flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+                className={cn(
+                  "hidden lg:flex items-center gap-2 text-sm font-medium transition-colors",
+                  isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+                )}
               >
-                <Phone className="w-4 h-4 text-gray-500" />
+                <Phone className={cn("w-4 h-4", isScrolled ? "text-gray-500" : "text-gold-400")} />
                 <span>+91 93616 23073</span>
               </a>
               <Link
@@ -92,7 +98,10 @@ export function Navbar() {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 text-gray-700 hover:text-gold-500 transition-colors"
+                className={cn(
+                  "lg:hidden p-2 transition-colors",
+                  isScrolled ? "text-gray-700 hover:text-gold-500" : "text-white hover:text-gold-400"
+                )}
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
