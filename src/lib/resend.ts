@@ -75,7 +75,7 @@ export async function sendConsultationEmail(data: ConsultationEmailProps) {
   `;
 
   const result = await resend.emails.send({
-    from: "Punithan Drone Pilot <onboarding@resend.dev>",
+    from: "Punithan Drone Pilot <noreply@punithanfly.com>",
     to: process.env.NOTIFICATION_EMAIL!,
     reply_to: email,
     subject: `New Consultation Request from ${name} - ${service}`,
@@ -151,7 +151,7 @@ export async function sendConfirmationEmail(
   `;
 
   const result = await resend.emails.send({
-    from: "Punithan Drone Pilot <onboarding@resend.dev>",
+    from: "Punithan Drone Pilot <noreply@punithanfly.com>",
     to: email,
     subject: "Thank You for Your Consultation Request - Punithan Drone Pilot",
     html: emailHtml,
