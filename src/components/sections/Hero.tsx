@@ -102,38 +102,42 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Side - Drone Illustration */}
+          {/* Right Side - Video Player */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative order-1 lg:order-2"
+            className="relative order-1 lg:order-2 h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
           >
-            {/* Drone Illustration */}
-            <div className="relative">
-              <DroneIllustration className="w-full max-w-md mx-auto lg:max-w-lg" animate={true} />
-
-              {/* Floating Badge - Equipment */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8 }}
-                className="absolute top-10 right-0 lg:right-4 bg-white rounded-xl px-4 py-2 shadow-lg border border-gray-100"
-              >
-                <p className="text-sm font-semibold text-gray-800">DJI Air 3S</p>
-                <p className="text-xs text-gray-500">Professional Equipment</p>
-              </motion.div>
-
-              {/* Vertical Timeline Dots */}
-              <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 flex-col gap-3">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div
-                    key={i}
-                    className={`w-2 h-2 rounded-full ${i === 1 ? "bg-gray-800" : "bg-gray-300"}`}
-                  />
-                ))}
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/videos/hero-bg.mp4" type="video/mp4" />
+            </video>
+            
+            {/* Play Button Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-all">
+              <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                  <Play className="w-5 h-5 text-gray-900 ml-1" />
+                </div>
               </div>
             </div>
+
+            {/* Floating Badge - Equipment */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8 }}
+              className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md rounded-xl px-4 py-2 shadow-lg border border-white/20"
+            >
+              <p className="text-sm font-semibold text-gray-900">4K Ultra HD</p>
+              <p className="text-xs text-gray-600">Cinematic Footage</p>
+            </motion.div>
           </motion.div>
         </div>
 
