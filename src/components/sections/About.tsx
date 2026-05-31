@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
+import { MediaCarousel, MediaItem } from "@/components/ui/MediaCarousel";
 
 const highlights = [
   "DGCA Certified & Compliant",
@@ -11,38 +12,17 @@ const highlights = [
   "High-Quality Deliverables",
 ];
 
-function PlaceholderImage({ type, className = "" }: { type: "landscape" | "portrait" | "square"; className?: string }) {
-  const colors = {
-    landscape: { bg: "#E5E7EB", accent: "#9CA3AF" },
-    portrait: { bg: "#DBEAFE", accent: "#93C5FD" },
-    square: { bg: "#FEF3C7", accent: "#FCD34D" },
-  };
-
-  return (
-    <div className={`relative overflow-hidden bg-gray-100 ${className}`}>
-      <svg viewBox="0 0 400 300" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-        <rect width="400" height="300" fill={colors[type].bg} />
-        <path d="M0 200 Q100 150 200 180 T400 160 L400 300 L0 300 Z" fill={colors[type].accent} opacity="0.3" />
-        <path d="M0 250 Q150 200 300 230 T400 220 L400 300 L0 300 Z" fill={colors[type].accent} opacity="0.2" />
-        {type === "landscape" && (
-          <>
-            <rect x="280" y="80" width="80" height="120" rx="4" fill="#6B7280" opacity="0.4" />
-            <rect x="285" y="85" width="70" height="80" fill="#9CA3AF" opacity="0.3" />
-          </>
-        )}
-        {type === "portrait" && (
-          <circle cx="200" cy="130" r="50" fill="#60A5FA" opacity="0.4" />
-        )}
-      </svg>
-    </div>
-  );
-}
+const aboutMedia: MediaItem[] = [
+  { type: "image", src: "/images/portfolio/IMG_0742.JPG", alt: "Drone Pilot in Action" },
+  { type: "image", src: "/images/portfolio/IMG_0743.JPG", alt: "Drone Aerial Shot" },
+  { type: "image", src: "/images/portfolio/IMG_0744.JPG", alt: "Drone Setup" },
+];
 
 export function About() {
   return (
     <section id="about" className="py-16 lg:py-20 bg-white relative overflow-hidden">
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Side - Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -91,48 +71,15 @@ export function About() {
             </Link>
           </motion.div>
 
-          {/* Right Side - Bento Grid Images */}
+          {/* Right Side - Media Carousel */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-3"
+            className="w-full aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-gray-900"
           >
-            {/* Top Left - Portrait */}
-            <div className="row-span-2">
-              <PlaceholderImage type="portrait" className="w-full h-full rounded-xl min-h-[280px]" />
-            </div>
-
-            {/* Top Right - Landscape with overlay */}
-            <div className="relative">
-              <PlaceholderImage type="landscape" className="w-full h-32 rounded-xl" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-lg">
-                  <p className="text-xs font-medium text-gray-600">Trusted by Businesses</p>
-                  <p className="text-[10px] text-gray-500">Across Industries</p>
-                  <div className="flex -space-x-2 mt-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white flex items-center justify-center text-[8px] font-medium text-white"
-                      >
-                        {String.fromCharCode(64 + i)}
-                      </div>
-                    ))}
-                    <div className="w-6 h-6 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-[8px] font-medium text-gray-600">
-                      +50
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Right - Two smaller squares */}
-            <div className="grid grid-cols-2 gap-3">
-              <PlaceholderImage type="square" className="w-full aspect-square rounded-xl" />
-              <PlaceholderImage type="landscape" className="w-full aspect-square rounded-xl" />
-            </div>
+            <MediaCarousel items={aboutMedia} />
           </motion.div>
         </div>
       </div>

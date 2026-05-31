@@ -76,11 +76,11 @@ export function Navbar() {
             {/* CTA Buttons */}
             <div className="flex items-center gap-4">
               <a
-                href="tel:+91XXXXXXXXXX"
-                className="hidden md:flex items-center gap-2 text-sm text-gray-600 hover:text-gold-500 transition-colors"
+                href="tel:+919361623073"
+                className="hidden lg:flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
               >
-                <Phone className="w-4 h-4" />
-                <span>+91 XXXXX XXXXX</span>
+                <Phone className="w-4 h-4 text-gray-500" />
+                <span>+91 93616 23073</span>
               </a>
               <Link
                 href="#consultation"

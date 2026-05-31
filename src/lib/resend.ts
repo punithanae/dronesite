@@ -124,7 +124,7 @@ export async function sendConfirmationEmail(
             </div>
             <p>If you have any urgent queries, feel free to reach out:</p>
             <ul>
-              <li>📞 Phone: +91 XXXXX XXXXX</li>
+              <li>📞 Phone: +91 93616 23073</li>
               <li>✉️ Email: contact@punithanfly.com</li>
               <li>💬 WhatsApp: Click to chat</li>
             </ul>

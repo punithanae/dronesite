@@ -6,7 +6,6 @@ import Link from "next/link";
 import { MediaCarousel, MediaItem } from "@/components/ui/MediaCarousel";
 
 const carouselItems: MediaItem[] = [
-  { type: "video", src: "/videos/carousel-1.mp4", alt: "Cinematic Drone Footage" },
   { type: "image", src: "/images/portfolio/IMG_0745.JPG", alt: "Drone Aerial Shot" },
   { type: "image", src: "/images/portfolio/IMG_0738.JPG", alt: "Drone Aerial Shot" },
   { type: "image", src: "/images/portfolio/IMG_0739.JPG", alt: "Drone Aerial Shot" },
@@ -24,7 +23,7 @@ export function Portfolio() {
               Showreel & Gallery
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
-              Featured Work
+              My Projects
             </h2>
           </div>
           <Link href="#contact" className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
@@ -38,6 +37,7 @@ export function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="relative aspect-[16/9] max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl bg-gray-900"
         >
           <MediaCarousel items={carouselItems} />
         </motion.div>

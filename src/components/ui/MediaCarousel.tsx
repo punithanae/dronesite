@@ -29,7 +29,7 @@ export function MediaCarousel({ items }: MediaCarouselProps) {
   if (!items || items.length === 0) return null;
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-video group">
+    <div className="relative w-full h-full min-h-[300px] mx-auto overflow-hidden group">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}

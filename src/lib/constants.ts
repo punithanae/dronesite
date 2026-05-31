@@ -215,9 +215,9 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const CONTACT_INFO = {
-  phone: process.env.NEXT_PUBLIC_PHONE || "+91 XXXXX XXXXX",
+  phone: process.env.NEXT_PUBLIC_PHONE || "+91 93616 23073",
   email: process.env.NEXT_PUBLIC_EMAIL || "contact@punithanfly.com",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "+91XXXXXXXXXX",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "+919361623073",
   address: process.env.NEXT_PUBLIC_ADDRESS || "Chennai, Tamil Nadu, India",
   dgcaLicense: process.env.NEXT_PUBLIC_DGCA_LICENSE || "DGCA Approved Pilot",
 };

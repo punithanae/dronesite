@@ -4,7 +4,13 @@ import { useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Play, ChevronDown, CheckCircle, Briefcase, Clock, Users } from "lucide-react";
-import { DroneIllustration } from "@/components/ui/DroneIllustration";
+import { MediaCarousel, MediaItem } from "@/components/ui/MediaCarousel";
+
+const heroMedia: MediaItem[] = [
+  { type: "video", src: "/videos/hero-bg.mp4", alt: "Hero Drone Footage" },
+  { type: "image", src: "/images/portfolio/IMG_0738.JPG", alt: "Drone Landscape" },
+  { type: "image", src: "/images/portfolio/IMG_0739.JPG", alt: "Drone Landscape 2" },
+];
 
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -102,38 +108,21 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Side - Video Player */}
+          {/* Right Side - Media Carousel */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative order-1 lg:order-2 h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
           >
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src="/videos/hero-bg.mp4" type="video/mp4" />
-            </video>
-            
-            {/* Play Button Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-all">
-              <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-                  <Play className="w-5 h-5 text-gray-900 ml-1" />
-                </div>
-              </div>
-            </div>
+            <MediaCarousel items={heroMedia} />
 
             {/* Floating Badge - Equipment */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8 }}
-              className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md rounded-xl px-4 py-2 shadow-lg border border-white/20"
+              className="absolute bottom-6 right-6 z-10 bg-white/90 backdrop-blur-md rounded-xl px-4 py-2 shadow-lg border border-white/20"
             >
               <p className="text-sm font-semibold text-gray-900">4K Ultra HD</p>
               <p className="text-xs text-gray-600">Cinematic Footage</p>

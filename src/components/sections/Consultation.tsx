@@ -207,7 +207,7 @@ export function Consultation() {
                       <input
                         {...register("phone")}
                         type="tel"
-                        placeholder="+91 XXXXX XXXXX"
+                        placeholder="+91 93616 23073"
                         className={cn(
                           "input-field pl-12",
                           errors.phone && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
