@@ -16,7 +16,7 @@ export const consultationSchema = z.object({
   location: z.string().optional(),
   preferredDate: z.string().optional(),
   message: z.string().max(1000, "Message must be less than 1000 characters").optional(),
-  recaptchaToken: z.string().min(1, "reCAPTCHA verification required"),
+  recaptchaToken: z.string().optional(),
 });
 
 export type ConsultationFormData = z.infer<typeof consultationSchema>;
