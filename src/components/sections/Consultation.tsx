@@ -56,7 +56,12 @@ export function Consultation() {
       let recaptchaToken = "bypass-for-development";
 
       if (executeRecaptcha) {
-        recaptchaToken = await executeRecaptcha("consultation_form");
+        try {
+          const token = await executeRecaptcha("consultation_form");
+          if (token) recaptchaToken = token;
+        } catch (e) {
+          console.warn("reCAPTCHA failed, proceeding without it", e);
+        }
       }
 
       const response = await fetch("/api/consultation", {
