@@ -38,11 +38,11 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
-            ? "bg-white/95 backdrop-blur-lg border-b border-gray-200 py-2 shadow-soft"
-            : "bg-white/80 backdrop-blur-sm py-4"
+            ? "bg-white/95 backdrop-blur-lg border-b border-gray-200 py-3 shadow-soft"
+            : "bg-transparent py-5"
         )}
       >
-        <div className="container-custom">
+        <div className="w-full px-6 lg:px-12">
           <nav className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
@@ -159,11 +159,11 @@ export function Navbar() {
                   <span>Book Free Consultation</span>
                 </Link>
                 <a
-                  href="tel:+91XXXXXXXXXX"
+                  href="tel:+919361623073"
                   className="flex items-center justify-center gap-2 mt-4 py-3 text-gold-500"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>+91 XXXXX XXXXX</span>
+                  <span>+91 93616 23073</span>
                 </a>
               </motion.div>
             </motion.nav>
