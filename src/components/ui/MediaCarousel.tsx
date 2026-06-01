@@ -55,6 +55,10 @@ export function MediaCarousel({ items }: MediaCarouselProps) {
               muted
               loop
               playsInline
+              onCanPlay={(e) => {
+                const video = e.target as HTMLVideoElement;
+                video.playbackRate = 0.7; // Slow down the video slightly to reduce lag appearance
+              }}
               className="w-full h-full object-cover"
             />
           )}
