@@ -57,7 +57,7 @@ export function MediaCarousel({ items }: MediaCarouselProps) {
               playsInline
               onCanPlay={(e) => {
                 const video = e.target as HTMLVideoElement;
-                video.playbackRate = 0.7; // Slow down the video slightly to reduce lag appearance
+                video.playbackRate = 0.5; // Slow down the video significantly
               }}
               className="w-full h-full object-cover"
             />
