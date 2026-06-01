@@ -23,7 +23,7 @@ export function Hero() {
 
   const stats = [
     { icon: Briefcase, value: "500+", label: "Projects Completed" },
-    { icon: Users, value: "100+", label: "Happy Clients" },
+    { icon: Users, value: "0", label: "Happy Clients" },
     { icon: Clock, value: "1200+", label: "Flight Hours" },
     { icon: CheckCircle, value: "98%", label: "Client Satisfaction" },
   ];
