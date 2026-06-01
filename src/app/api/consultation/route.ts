@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
         });
 
         // Send confirmation to client
-        await sendConfirmationEmail(email, name, service);
+        // DISABLED UNTIL DOMAIN IS VERIFIED: await sendConfirmationEmail(email, name, service);
       } catch (emailError) {
         console.error("Email error:", emailError);
         // Don't fail the request if email fails
