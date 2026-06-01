@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-export const resend = new Resend(process.env.RESEND_API_KEY);
+// Removed top level resend initialization to prevent Vercel build errors if env var is missing
 
 interface ConsultationEmailProps {
   name: string;
@@ -13,6 +13,12 @@ interface ConsultationEmailProps {
 }
 
 export async function sendConsultationEmail(data: ConsultationEmailProps) {
+  if (!process.env.RESEND_API_KEY) {
+    console.error("RESEND_API_KEY is not set. Email not sent.");
+    return { error: "RESEND_API_KEY is missing" };
+  }
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   const { name, email, phone, service, location, preferredDate, message } = data;
 
   const emailHtml = `
@@ -94,6 +100,12 @@ export async function sendConfirmationEmail(
   name: string,
   service: string
 ) {
+  if (!process.env.RESEND_API_KEY) {
+    console.error("RESEND_API_KEY is not set. Email not sent.");
+    return { error: "RESEND_API_KEY is missing" };
+  }
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   const emailHtml = `
     <!DOCTYPE html>
     <html>
