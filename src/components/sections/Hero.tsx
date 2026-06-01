@@ -22,10 +22,10 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const stats = [
-    { icon: Briefcase, value: "500+", label: "Projects Completed" },
+    { icon: Briefcase, value: "0", label: "Projects Completed" },
     { icon: Users, value: "0", label: "Happy Clients" },
-    { icon: Clock, value: "1200+", label: "Flight Hours" },
-    { icon: CheckCircle, value: "98%", label: "Client Satisfaction" },
+    { icon: Clock, value: "0", label: "Flight Hours" },
+    { icon: CheckCircle, value: "0%", label: "Client Satisfaction" },
   ];
 
   return (
