@@ -140,9 +140,8 @@ export async function sendConfirmationEmail(
             </div>
             <p>If you have any urgent queries, feel free to reach out:</p>
             <ul>
-              <li>📞 Phone: +91 93616 23073</li>
+              <li>💬 WhatsApp: +91 93616 23073</li>
               <li>✉️ Email: contact@punithanfly.com</li>
-              <li>💬 WhatsApp: Click to chat</li>
             </ul>
             <p>We look forward to elevating your perspectives!</p>
             <p><strong>Team Punithan Drone Pilot</strong></p>

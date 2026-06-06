@@ -7,7 +7,7 @@ import { Play, ChevronDown, CheckCircle, Briefcase, Clock, Users } from "lucide-
 import { MediaCarousel, MediaItem } from "@/components/ui/MediaCarousel";
 
 const heroMedia: MediaItem[] = [
-  { type: "video", src: "https://raw.githubusercontent.com/punithanae/dronesite/main/public/videos/hero-bg.mp4", alt: "Hero Drone Footage" },
+  { type: "video", src: "/videos/hero-bg.mp4", alt: "Hero Drone Footage" },
   { type: "image", src: "/images/portfolio/IMG_0738.JPG", alt: "Drone Landscape" },
   { type: "image", src: "/images/portfolio/IMG_0739.JPG", alt: "Drone Landscape 2" },
 ];

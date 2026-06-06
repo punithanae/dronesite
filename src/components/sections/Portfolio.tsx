@@ -6,6 +6,8 @@ import Link from "next/link";
 import { MediaCarousel, MediaItem } from "@/components/ui/MediaCarousel";
 
 const carouselItems: MediaItem[] = [
+  { type: "youtube", src: "https://www.youtube.com/embed/ZybJOAu6SBQ", alt: "Cinematic Drone Reel 1" },
+  { type: "youtube", src: "https://www.youtube.com/embed/5HpZmOdGpUE", alt: "Cinematic Drone Reel 2" },
   { type: "image", src: "/images/portfolio/IMG_0745.JPG", alt: "Drone Aerial Shot" },
   { type: "image", src: "/images/portfolio/IMG_0738.JPG", alt: "Drone Aerial Shot" },
   { type: "image", src: "/images/portfolio/IMG_0739.JPG", alt: "Drone Aerial Shot" },

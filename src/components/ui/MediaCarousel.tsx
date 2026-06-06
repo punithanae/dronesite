@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export interface MediaItem {
-  type: "image" | "video";
+  type: "image" | "video" | "youtube";
   src: string;
   alt: string;
 }
@@ -47,6 +47,14 @@ export function MediaCarousel({ items }: MediaCarouselProps) {
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               priority
+            />
+          ) : items[currentIndex].type === "youtube" ? (
+            <iframe
+              src={items[currentIndex].src}
+              title={items[currentIndex].alt}
+              className="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
             />
           ) : (
             <video

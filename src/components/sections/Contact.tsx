@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  Phone,
   Mail,
   MapPin,
   Clock,
@@ -10,7 +9,9 @@ import {
   Youtube,
   Linkedin,
   Facebook,
+  MessageSquare,
 } from "lucide-react";
+import { generateWhatsAppLink } from "@/lib/utils";
 import { CONTACT_INFO, SOCIAL_LINKS } from "@/lib/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -23,10 +24,10 @@ const iconMap: Record<string, React.ElementType> = {
 
 const contactDetails = [
   {
-    icon: Phone,
-    label: "Phone",
-    value: CONTACT_INFO.phone,
-    href: `tel:${CONTACT_INFO.phone.replace(/\s/g, "")}`,
+    icon: MessageSquare,
+    label: "WhatsApp",
+    value: "Chat with us",
+    href: generateWhatsAppLink(CONTACT_INFO.whatsapp),
   },
   {
     icon: Mail,

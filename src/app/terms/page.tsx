@@ -149,7 +149,7 @@ export default function TermsOfService() {
               <div className="mt-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
                 <p className="text-gray-900 font-medium">Punithan Drone Pilot</p>
                 <p className="text-gray-600">Email: contact@punithanfly.com</p>
-                <p className="text-gray-600">Phone: +91 93616 23073</p>
+                <p className="text-gray-600">WhatsApp: +91 93616 23073</p>
                 <p className="text-gray-600">Location: Chennai, Tamil Nadu, India</p>
               </div>
             </section>

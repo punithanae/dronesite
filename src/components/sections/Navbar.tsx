@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
-import { NAV_ITEMS } from "@/lib/constants";
+import { Menu, X, MessageSquare } from "lucide-react";
+import { generateWhatsAppLink } from "@/lib/utils";
+import { NAV_ITEMS, CONTACT_INFO } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -78,15 +79,17 @@ export function Navbar() {
 
             {/* CTA Buttons */}
             <div className="flex items-center gap-4">
-              <a
-                href="tel:+919361623073"
+              <a 
+                href={generateWhatsAppLink(CONTACT_INFO.whatsapp)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(
-                  "hidden lg:flex items-center gap-2 text-sm font-medium transition-colors",
-                  isScrolled ? "text-gray-700 hover:text-gray-900" : "text-white/90 hover:text-white"
+                  "hidden lg:flex items-center gap-2 text-sm font-medium transition-colors hover:text-gold-400",
+                  isScrolled ? "text-gray-700" : "text-white"
                 )}
               >
-                <Phone className={cn("w-4 h-4", isScrolled ? "text-gray-500" : "text-gold-400")} />
-                <span>+91 93616 23073</span>
+                <MessageSquare className={cn("w-4 h-4", isScrolled ? "text-gray-500" : "text-gold-400")} />
+                <span>WhatsApp Us</span>
               </a>
               <Link
                 href="#consultation"
@@ -167,12 +170,15 @@ export function Navbar() {
                 >
                   <span>Book Free Consultation</span>
                 </Link>
-                <a
-                  href="tel:+919361623073"
-                  className="flex items-center justify-center gap-2 mt-4 py-3 text-gold-500"
+                <a 
+                  href={generateWhatsAppLink(CONTACT_INFO.whatsapp)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 mt-4 rounded-xl bg-gray-50 text-gray-900 hover:bg-gray-100 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>+91 93616 23073</span>
+                  <MessageSquare className="w-5 h-5" />
+                  <span>WhatsApp Us</span>
                 </a>
               </motion.div>
             </motion.nav>
