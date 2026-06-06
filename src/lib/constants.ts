@@ -208,8 +208,8 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: "Instagram", url: "https://instagram.com/punithanfly", icon: "Instagram" },
-  { platform: "YouTube", url: "https://youtube.com/@punithanfly", icon: "Youtube" },
+  { platform: "Instagram", url: "https://instagram.com/punithan875", icon: "Instagram" },
+  { platform: "YouTube", url: "https://youtube.com/@AeroVista-j3k", icon: "Youtube" },
   { platform: "LinkedIn", url: "https://linkedin.com/in/punithanfly", icon: "Linkedin" },
   { platform: "Facebook", url: "https://facebook.com/punithanfly", icon: "Facebook" },
 ];
